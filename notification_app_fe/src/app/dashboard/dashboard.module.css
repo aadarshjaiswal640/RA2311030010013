@@ -1,0 +1,264 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.header {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 8px 0 0 0;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.section {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section h2 {
+  margin: 0 0 24px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 3px solid #1976d2;
+  padding-bottom: 12px;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(25, 118, 210, 0.3);
+}
+
+.button:hover:not(:disabled) {
+  background-color: #1565c0;
+  box-shadow: 0 4px 8px rgba(25, 118, 210, 0.4);
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.authSuccess {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.successIcon {
+  font-size: 32px;
+  color: #4caf50;
+  flex-shrink: 0;
+}
+
+.authDetails {
+  flex: 1;
+}
+
+.authDetails p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.authDetails strong {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #4caf50;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.valid {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.invalid {
+  color: #f44336;
+  font-weight: 600;
+}
+
+.tokenDetails {
+  margin-top: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tokenDetails summary {
+  font-weight: 600;
+  color: #1976d2;
+  user-select: none;
+}
+
+.tokenDetails pre {
+  margin: 12px 0 0 0;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  font-size: 12px;
+  overflow-x: auto;
+  color: #666;
+}
+
+.prioritySection {
+  margin-bottom: 32px;
+}
+
+.allNotificationsSection {
+  margin-top: 32px;
+}
+
+.emptyPlaceholder {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: #999;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.statCard {
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.statCard:hover {
+  transform: translateY(-4px);
+}
+
+.statValue {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+.footer {
+  background: #f5f5f5;
+  padding: 24px 20px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer p {
+  margin: 8px 0;
+  font-size: 13px;
+  color: #666;
+}
+
+.debug {
+  margin-top: 12px;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.debug code {
+  background: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 2px;
+  font-family: "Courier New", monospace;
+  color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main {
+    padding: 20px 12px;
+    gap: 24px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .header h1 {
+    font-size: 28px;
+  }
+
+  .section h2 {
+    font-size: 20px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .authSuccess {
+    flex-direction: column;
+  }
+}
