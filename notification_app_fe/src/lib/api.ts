@@ -144,7 +144,9 @@ async function sendWithTimeout<T>(
     return await parseResponse<T>(response);
   } catch (error: unknown) {
     if (error instanceof ApiError) {
-      logger.error("api", `${method} ${endpoint} error`, { status: error.status, message: error.message });
+      // Log 4xx errors as warn (they're often handled), 5xx as error
+      const logLevel = error.status >= 400 && error.status < 500 ? "warn" : "error";
+      logger[logLevel]("api", `${method} ${endpoint} failed`, { status: error.status, message: error.message });
       throw error;
     }
 
